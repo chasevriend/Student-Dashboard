@@ -1,37 +1,75 @@
 .container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: 3 1fr;
 }
 
 .head {
     grid-row-start: 1;
     grid-row-end: 1;
     grid-column-start: 2;
-    grid-column-end: 4;
-    background-color: aqua;
+    grid-column-end: 5;
+    background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90%);
+}
+
+.head-right {
+    float: right;
 }
 
 .dashboard {
     grid-row-start: 1;
-    grid-row-end: auto;
+    grid-row-end: 5;
     grid-column-start: 1;
     grid-column-end: 2;
-    background-color: red;
+    background-color: #408bd2;
 }
 
 .projects {
     grid-column-start: 2;
     grid-column-end: 5;
+    grid-row-end: 4;
+    grid-row-start: 2;
     background-color: blueviolet;
 }
 
 .announcements {
     grid-column-start: 5;
-    grid-row-start: 2;
-    background-color: coral;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90%);
 }
 
 .friends {
-    background-color: chartreuse;
+    background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90%);
+    grid-row-start: 2;
+    grid-column-start: 5;
+    grid-row-end: 5;
+}
+
+.goals {
+    grid-column-end: -1;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    background-color: blanchedalmond;
+}
+
+button {
+    background: #408bd2;
+    border-radius: 20px;
+}
+
+.your-projects {
+    display: inline-grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.project-title {
+    grid-column-end: 3;
+    grid-column-start: 1;
+}
+
+.your-projects > div {
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 10%;
 }
